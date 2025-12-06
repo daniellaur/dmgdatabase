@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('dmgdatabase', 'current_player_name') }}
+    select * from {{ source('gsheets', 'current_player_name') }}
 
 ),
 
