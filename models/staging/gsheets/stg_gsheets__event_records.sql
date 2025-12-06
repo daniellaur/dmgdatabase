@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('dmgdatabase', 'event_records') }}
+    select * from {{ source('gsheets', 'event_records') }}
 
 ),
 

@@ -1,9 +1,9 @@
 version: 2
 
 sources:
-  - name: dmgdatabase
+  - name: gsheets
     database: pure-silicon-474707-k0
-    schema: dmgdatabase
+    schema: gsheets
     tables:
       - name: event_records
         description: All records that have been record during events
