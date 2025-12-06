@@ -1,9 +1,11 @@
 version: 2
 
 sources:
-  - name: gsheets
-    database: dmgdatabase
-    schema: GSHEETS
-    loader: Airbyte
+  - name: dmgdatabase
+    database: pure-silicon-474707-k0
+    schema: dmgdatabase
     tables:
-      - name: SERVER_EXPORT
+      - name: event_records
+        description: All records that have been record during events
+      - name: current_player_name
+        description: The current username of all event players
