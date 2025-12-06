@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: gsheets
+    database: dmgdatabase
+    schema: GSHEETS
+    loader: Airbyte
+    tables:
+      - name: SERVER_EXPORT

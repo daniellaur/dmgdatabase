@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: stg_gsheets__records
+      description: List of in game records
+      columns:
+      - name: record_id
+        tests:
+          - not_null
+          - unique
