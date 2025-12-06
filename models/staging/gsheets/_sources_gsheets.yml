@@ -1,10 +1,18 @@
 version: 2
 
 models:
-    - name: stg_gsheets__records
-      description: List of in game records
+    - name: stg_gsheets__event_records
+      description: All records that have been record during events
       columns:
       - name: record_id
+        tests:
+          - not_null
+          - unique
+    
+    - name: stg_gsheets__current_player_name
+      description: The current username of all event players
+      columns:
+      - name: player_name
         tests:
           - not_null
           - unique
