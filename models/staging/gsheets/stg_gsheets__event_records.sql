@@ -44,8 +44,12 @@ renamed as (
 
         safe_cast(event_number as integer) as event_number,
         safe_cast(objective as string) as objective,
-        safe_cast(value as integer) as value
-
+        
+        case
+        when value = 0 then null
+        else safe_cast(value as integer) 
+        end as value
+        
     from source
 
 )
