@@ -55,3 +55,5 @@ renamed as (
 )
 
 select * from renamed
+
+where value is not null
