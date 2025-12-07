@@ -23,7 +23,7 @@ renamed as (
         event_records.event_type,
         event_records.event_number,
         event_records.objective,
-        event_records.value,
+        event_records.value
 
     from event_records
 

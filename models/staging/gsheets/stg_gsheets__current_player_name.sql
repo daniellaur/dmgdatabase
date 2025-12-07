@@ -14,7 +14,7 @@ renamed as (
         safe_cast(player_id as string) as player_id,
 
         -- Properties
-        safe_cast(player_name as string) as player_name,
+        safe_cast(player_name as string) as player_name
 
     from source
 

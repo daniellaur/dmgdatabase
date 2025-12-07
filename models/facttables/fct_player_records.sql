@@ -67,7 +67,7 @@ renamed as (
         when right(objective, 8) = 'laps_1st' then 'First Place Laps'
         when right(objective, 12) = 'finished_1st' then 'First Place Finishes'
         else null
-        end as game_objective,
+        end as game_objective
 
     from event_records
 
