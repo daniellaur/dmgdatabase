@@ -2,7 +2,6 @@ select
 
     -- IDs
     record_id,
-    player_id,
     event_id,
 
     -- Timestamps
@@ -10,12 +9,10 @@ select
 
     -- Properties
     player_name,
-    player_team,
     event_type,
-    event_number,
-    objective,
     value,
     game_name,
-    game_objective
+    game_objective,
+    player_placement
 
 from {{ ref('fct_player_records') }}
