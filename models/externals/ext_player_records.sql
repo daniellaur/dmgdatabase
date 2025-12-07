@@ -19,5 +19,3 @@ select
     game_objective
 
 from {{ ref('fct_player_records') }}
-
-where event_id is null
