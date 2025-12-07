@@ -10,6 +10,7 @@ select
     -- Properties
     player_name,
     event_type,
+    objective,
     value,
     game_name,
     game_objective,
