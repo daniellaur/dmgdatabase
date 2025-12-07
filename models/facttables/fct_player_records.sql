@@ -73,4 +73,11 @@ renamed as (
 
 )
 
-select * from renamed
+select *,
+
+dense_rank() over (
+    partition by event_id, objective
+    order by value desc
+) as player_placement
+
+from renamed
