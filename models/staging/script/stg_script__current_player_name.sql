@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('gsheets', 'current_player_name') }}
+    select * from {{ source('script', 'current_player_name') }}
 
 ),
 
@@ -12,6 +12,9 @@ renamed as (
     
         -- IDs
         safe_cast(player_id as string) as player_id,
+
+        -- Timestamps
+        timestamp(updated_at) as updated_at,
 
         -- Properties
         safe_cast(player_name as string) as player_name

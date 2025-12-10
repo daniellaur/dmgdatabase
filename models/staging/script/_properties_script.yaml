@@ -1,14 +1,14 @@
 version: 2
 
 sources:
-  - name: gsheets
+  - name: script
     database: pure-silicon-474707-k0
-    schema: gsheets
+    schema: script
     tables:
-      - name: event_records
-        description: All records that have been recorded during events
+      - name: current_player_name
+        description: The current username of all event players
         config:
           freshness:
             warn_after: {count: 26, period: hour}
             error_after: {count: 28, period: hour}
-          loaded_at_field: extracted_at
+          loaded_at_field: updated_at
