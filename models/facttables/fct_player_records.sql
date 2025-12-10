@@ -18,8 +18,10 @@ renamed as (
         -- Timestamps
         event_records.created_at,
 
-        -- Properties
+        -- Properties | Players
         players.player_name,
+
+        -- Properties | Event Records
         event_records.player_team,
         event_records.event_type,
         event_records.event_number,

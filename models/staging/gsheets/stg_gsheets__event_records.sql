@@ -54,11 +54,7 @@ renamed as (
 
         safe_cast(event_number as integer) as event_number,
         safe_cast(objective as string) as objective,
-        
-        case
-            when value = 0 then null
-            else safe_cast(value as integer) 
-        end as value
+        safe_cast(value as integer) as value,
         
     from source
 
@@ -66,4 +62,4 @@ renamed as (
 
 select * from renamed
 
-where value is not null
+where value > 0

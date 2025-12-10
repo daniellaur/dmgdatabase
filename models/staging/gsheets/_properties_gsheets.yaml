@@ -12,3 +12,10 @@ sources:
             warn_after: {count: 26, period: hour}
             error_after: {count: 28, period: hour}
           loaded_at_field: extracted_at
+      - name: discord
+        description: Discord Users mapped to Minecraft Players
+        config:
+          freshness:
+            warn_after: {count: 26, period: hour}
+            error_after: {count: 28, period: hour}
+          loaded_at_field: extracted_at

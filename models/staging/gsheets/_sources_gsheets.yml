@@ -8,3 +8,15 @@ models:
         tests:
           - not_null
           - unique
+
+    - name: stg_gsheets__discord
+      description: Discord Users mapped to Minecraft Players
+      columns:
+      - name: discord_id
+        tests:
+          - not_null
+          - unique
+      - name: player_id
+        tests:
+          - not_null
+          - unique
