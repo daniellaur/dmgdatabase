@@ -19,10 +19,26 @@ renamed as (
         timestamp(extracted_at) as extracted_at,
 
         -- Properties
-        safe_cast(is_event_player as boolean) as is_event_player,
-        safe_cast(is_og_player as boolean) as is_og_player,
-        safe_cast(is_polish_player as boolean) as is_polish_player,
-        safe_cast(is_tester as boolean) as is_tester,
+        case 
+            when player_id = 'a8c55cbe-259a-4e79-8d7d-1595385a1107' then true
+            else safe_cast(is_event_player as boolean)
+        end as is_event_player,
+
+        case 
+            when player_id = 'a8c55cbe-259a-4e79-8d7d-1595385a1107' then true
+            else safe_cast(is_og_player as boolean)
+        end as is_og_player,
+
+        case 
+            when player_id = 'a8c55cbe-259a-4e79-8d7d-1595385a1107' then true
+            else safe_cast(is_polish_player as boolean)
+        end as is_polish_player,
+
+        case 
+            when player_id = 'a8c55cbe-259a-4e79-8d7d-1595385a1107' then true
+            else safe_cast(is_tester as boolean)
+        end as is_tester,
+
         case
             when discord_id is not null
             then true
@@ -35,4 +51,5 @@ renamed as (
 
 select * from renamed
 
-where discord_id is not null and player_id is not null
+where discord_id is not null 
+    and player_id is not null
