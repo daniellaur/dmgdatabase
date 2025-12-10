@@ -24,10 +24,7 @@ renamed as (
         safe_cast(is_polish_player as boolean) as is_polish_player,
         safe_cast(is_tester as boolean) as is_tester,
         case
-            when is_event_player is false
-            and is_og_player is false
-            and is_polish_player is false
-            and is_tester is false
+            when discord_id is not null
             then true
             else false
         end as is_general_player
