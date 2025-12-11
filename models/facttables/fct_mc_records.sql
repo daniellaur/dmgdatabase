@@ -13,6 +13,7 @@ renamed as (
         -- IDs
         mc_records.record_id,
         mc_records.player_id,
+        players.discord_id,
         mc_records.event_id,
 
         -- Timestamps
@@ -26,6 +27,11 @@ renamed as (
 
         -- Properties | Players
         players.player_name,
+        players.is_event_player,
+        players.is_og_player,
+        players.is_polish_player,
+        players.is_tester,
+        players.is_general_player,
 
         -- Properties | Mc Records
         mc_records.player_team,

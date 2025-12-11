@@ -20,6 +20,7 @@ renamed as (
 
         -- Properties
         case
+            when event_number = 0 then null
             when event_type = 'main' then concat('DMG ', event_number)
             when event_type = 'og' then concat('OG ', event_number)
             when event_type = 'polish' then concat('PL ', event_number)
