@@ -33,7 +33,7 @@ renamed as (
 
     group by
         event_id,
-        created_at,
+        created_at_date,
         event_name,
         team_name,
         game_name
