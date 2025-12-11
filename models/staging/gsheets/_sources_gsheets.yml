@@ -1,22 +1,30 @@
 version: 2
 
 models:
-    - name: stg_gsheets__event_records
-      description: All records that have been recorded during events
+    - name: stg_gsheets__mc_records
+      description: All records that have been recorded during mc events
       columns:
       - name: record_id
         tests:
           - not_null
           - unique
 
-    - name: stg_gsheets__discord
-      description: Discord Users mapped to Minecraft Players
+    - name: stg_gsheets__discord_users
+      description: Discord users mapped to minecraft players
       columns:
       - name: discord_id
         tests:
           - not_null
           - unique
       - name: player_id
+        tests:
+          - not_null
+          - unique
+
+    - name: stg_gsheets__events
+      description: All future and past events
+      columns:
+      - name: event_id
         tests:
           - not_null
           - unique

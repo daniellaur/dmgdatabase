@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('gsheets', 'discord') }}
+    select * from {{ source('gsheets', 'discord_users') }}
 
 ),
 

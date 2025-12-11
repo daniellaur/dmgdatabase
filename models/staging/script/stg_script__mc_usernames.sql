@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('script', 'current_player_name') }}
+    select * from {{ source('script', 'mc_usernames') }}
 
 ),
 

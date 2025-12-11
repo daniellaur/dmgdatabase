@@ -2,7 +2,7 @@ with
 
 players as (
 
-    select * from {{ ref("stg_script__current_player_name") }}
+    select * from {{ ref("stg_script__mc_usernames") }}
 
 ),
 
@@ -27,7 +27,7 @@ renamed as (
     from players
 
     left join
-    {{ ref('stg_gsheets__discord') }} as discord
+    {{ ref('stg_gsheets__discord_users') }} as discord
     on discord.player_id = players.player_id
 
 )
