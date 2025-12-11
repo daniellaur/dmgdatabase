@@ -19,6 +19,7 @@ renamed as (
 
         -- Properties
         event_name,
+        event_type,
         player_team as team_name,
         
         case
@@ -35,6 +36,7 @@ renamed as (
         event_id,
         created_at_date,
         event_name,
+        event_type,
         team_name,
         game_name
 

@@ -8,6 +8,7 @@ select
 
     -- Properties
     event_name,
+    event_type,
     team_name,
     game_name,
 
