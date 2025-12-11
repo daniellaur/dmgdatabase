@@ -24,11 +24,31 @@ renamed as (
             when event_type = 'main' then concat('DMG ', event_number)
             when event_type = 'og' then concat('OG ', event_number)
             when event_type = 'polish' then concat('PL ', event_number)
-            when event_type = 'testing' then concat('T ', event_number)
+            when event_type = 'testing' then concat('T', event_number)
             when event_type = 'community' then concat('COM ', event_number)
             when event_type = 'private' then concat('PR ', event_number)
             else null
         end as event_name,
+
+        case
+            when event_type = 'main' then concat('DMG', event_number)
+            when event_type = 'og' then concat('OG', event_number)
+            when event_type = 'polish' then concat('PL', event_number)
+            when event_type = 'testing' then concat('T', event_number)
+            when event_type = 'community' then concat('COM', event_number)
+            when event_type = 'private' then concat('PR', event_number)
+            else null
+        end as event_name_mc,
+
+        case
+            when event_type = 'main' then concat(event_number)
+            when event_type = 'og' then concat('OG ', event_number)
+            when event_type = 'polish' then concat('PL ', event_number)
+            when event_type = 'testing' then concat('T', event_number)
+            when event_type = 'community' then concat('COM ', event_number)
+            when event_type = 'private' then concat('PR ', event_number)
+            else null
+        end as event_suffix_mc,
 
         case 
             when event_type = 'main' then 'Main Event'
