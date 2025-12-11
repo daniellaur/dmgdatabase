@@ -14,4 +14,4 @@ select
     events_played_3m,
     events_played_6m
 
-from {{ ref('agg_player_stats') }}
+from {{ ref('agg_teammaker_stats') }}
