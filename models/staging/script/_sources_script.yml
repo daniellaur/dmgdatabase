@@ -1,8 +1,8 @@
 version: 2
 
 models:
-    - name: stg_script__current_player_name
-      description: The current username of all event players
+    - name: stg_script__mc_usernames
+      description: The current mc username of all players
       columns:
       - name: player_id
         tests:
