@@ -1,0 +1,10 @@
+version: 2
+
+models:
+    - name: dim_events
+      description: Dimension of all events
+      columns:
+      - name: event_name_mc
+        tests:
+          - not_null
+          - unique
