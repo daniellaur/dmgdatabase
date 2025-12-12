@@ -56,7 +56,7 @@ renamed as (
             when event_type = 'polish' then 'Polish Event'
             when event_type = 'testing' then 'Testing'
             when event_type = 'community' then 'Community Event'
-            when event_type = 'private' then 'Private Events'
+            when event_type = 'private' then 'Private Event'
             else null
         end as event_type,
 
