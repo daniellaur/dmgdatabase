@@ -47,9 +47,9 @@ renamed as (
 
     from source
 
+    where discord_id is not null 
+        and player_id is not null
+
 )
 
 select * from renamed
-
-where discord_id is not null 
-    and player_id is not null

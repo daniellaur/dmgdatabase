@@ -28,3 +28,11 @@ models:
         tests:
           - not_null
           - unique
+
+    - name: stg_gsheets__signups
+      description: All signups for all events
+      columns:
+      - name: signup_id
+        tests:
+          - not_null
+          - unique

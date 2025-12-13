@@ -37,8 +37,8 @@ renamed as (
         
     from source
 
+    where player_value > 0
+
 )
 
 select * from renamed
-
-where player_value > 0

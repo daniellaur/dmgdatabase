@@ -23,9 +23,9 @@ renamed as (
         safe_cast(event_number as integer) as event_number
 
     from source
+    
+    where event_id is not null
 
 )
 
 select * from renamed
-
-where event_id is not null

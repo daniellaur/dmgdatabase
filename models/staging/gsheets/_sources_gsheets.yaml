@@ -9,20 +9,27 @@ sources:
         description: All records that have been recorded during mc events
         config:
           freshness:
-            warn_after: {count: 26, period: hour}
-            error_after: {count: 28, period: hour}
+            warn_after: {count: 2, period: hour}
+            error_after: {count: 3, period: hour}
           loaded_at_field: extracted_at
       - name: discord_users
         description: Discord users mapped to minecraft players
         config:
           freshness:
-            warn_after: {count: 26, period: hour}
-            error_after: {count: 28, period: hour}
+            warn_after: {count: 2, period: hour}
+            error_after: {count: 3, period: hour}
           loaded_at_field: extracted_at
       - name: events
         description: All future and past events
         config:
           freshness:
-            warn_after: {count: 26, period: hour}
-            error_after: {count: 28, period: hour}
+            warn_after: {count: 2, period: hour}
+            error_after: {count: 3, period: hour}
+          loaded_at_field: extracted_at
+      - name: signups
+        description: All signups for all events
+        config:
+          freshness:
+            warn_after: {count: 2, period: hour}
+            error_after: {count: 3, period: hour}
           loaded_at_field: extracted_at

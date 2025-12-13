@@ -32,6 +32,8 @@ renamed as (
 
     from source
 
+    where game_name is not null
+
     group by
         event_id,
         created_at_date,
@@ -43,5 +45,3 @@ renamed as (
 )
 
 select * from renamed
-
-where game_name is not null
