@@ -25,7 +25,7 @@ renamed as (
             when event_type = 'og' then concat('OG ', event_number)
             when event_type = 'polish' then concat('PL ', event_number)
             when event_type = 'testing' then concat('T', event_number)
-            when event_type = 'community' then concat('COM ', event_number)
+            when event_type = 'daily' then concat('Daily ', event_number)
             when event_type = 'private' then concat('PR ', event_number)
             else null
         end as event_name,
@@ -35,7 +35,7 @@ renamed as (
             when event_type = 'og' then concat('OG', event_number)
             when event_type = 'polish' then concat('PL', event_number)
             when event_type = 'testing' then concat('T', event_number)
-            when event_type = 'community' then concat('COM', event_number)
+            when event_type = 'daily' then concat('Daily', event_number)
             when event_type = 'private' then concat('PR', event_number)
             else null
         end as event_name_mc,
@@ -45,7 +45,7 @@ renamed as (
             when event_type = 'og' then concat('OG ', event_number)
             when event_type = 'polish' then concat('PL ', event_number)
             when event_type = 'testing' then concat('T', event_number)
-            when event_type = 'community' then concat('COM ', event_number)
+            when event_type = 'daily' then concat('Daily ', event_number)
             when event_type = 'private' then concat('PR ', event_number)
             else null
         end as event_suffix_mc,
@@ -55,7 +55,7 @@ renamed as (
             when event_type = 'og' then 'OG Event'
             when event_type = 'polish' then 'Polish Event'
             when event_type = 'testing' then 'Testing'
-            when event_type = 'community' then 'Community Event'
+            when event_type = 'daily' then 'Daily Event'
             when event_type = 'private' then 'Private Event'
             else null
         end as event_type,
