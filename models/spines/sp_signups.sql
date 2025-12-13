@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ ref('stg_gsheets_signups') }}
+    select * from {{ ref('stg_gsheets__signups') }}
 
 ),
 
